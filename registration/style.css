@@ -1,0 +1,193 @@
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  body {
+    font-size: 120%;
+    background: rgba(25,139,20,0.2);
+    font-family: 'Montserrat', sans-serif;
+   
+  }
+  
+  .header {
+    width: 30%;
+    margin: 50px auto 0px;
+
+    margin-top: 20px;
+    color: white;
+    background: rgba(25,139,20,0.8);
+    text-align: center;
+    border: 1px solid rgba(25,139,20,0.8);
+    border-bottom: none;
+    /* border-radius: 10px 10px 0px 0px; */
+    padding: 20px;
+  }
+  form, .content {
+    width: 30%;
+    margin: 0px auto;
+    padding: 20px;
+    border: 1px solid rgba(25,139,20,0.8);
+    background: #fff;
+    /* border-radius: 0px 0px 10px 10px; */
+  }
+
+  form.nursery, .nursery.header {
+    width: 60%;
+  }
+
+  /* form.nursery label, input, select {
+
+  } */
+  
+
+  form.nursery {
+    margin-bottom: 20px;
+  }
+
+  /* form divide */
+
+ form.nursery .formDivide {
+   width: 45%;
+ }
+  .input-group {
+    margin: 10px 0px 10px 0px;
+  }
+
+  .input-group label {
+    display: block;
+    text-align: left;
+    margin: 3px;
+    color: rgb(5, 49, 3);
+  }
+  .input-group input {
+    height: 30px;
+    width: 93%;
+    padding: 5px 10px;
+    color: #555;
+    background: #fff;
+    font-size: 16px;
+    /* border-radius: 5px; */
+    border: none;
+    border-bottom: 1px solid rgba(107, 49, 49, 0.5);
+    outline:none;
+  }
+
+  .input-group.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    width: 93%;
+  }
+
+  .input-group.btn .btn {
+    width: 200px;
+  }
+
+  button.btn {
+    padding: 10px;
+    font-size: 100%;
+    color: white;
+    background: rgba(25,139,20,0.8);
+    border: none;
+    border-radius: 5px;
+  }
+
+  button.btn:hover {
+    background: rgba(10, 66, 7, 0.8)
+  }
+
+  .error {
+    width: 92%; 
+    margin: 0px auto; 
+    padding: 10px; 
+    border: 1px solid #a94442; 
+    color: #a94442; 
+    background: #f2dede; 
+    font-family: 'Dosis', sans-serif;
+    
+    text-align: center;
+    overflow: wrap;
+  }
+
+  /* error div for nursery form */
+
+  div.nurseryReg .error {
+    width: 41%;
+  }
+
+  .success {
+    color: #3c763d; 
+    background: #dff0d8; 
+    border: 1px solid #3c763d;
+    margin-bottom: 20px;
+  }
+  p.sec {
+    padding: 10px 0;
+  }
+
+  p.sec a {
+    text-decoration: none;
+    font-size: .9rem;
+    color: #a94442;
+  }
+
+  p.sec.nursery {
+    width: 100%;
+    text-align: right;
+  }
+
+  a#eval:hover {
+    background: #12610c!important;
+    cursor: pointer;
+  }
+  input.disabled {
+    border-bottom: none;
+  }
+
+  @media only screen 
+  and (max-width : 320px) {
+ 
+
+    .header, form, .content {
+      width: 90%;
+      margin: 0;
+    }
+
+    body {
+      font-size: 1.3rem;
+    }
+
+    .header {
+      height: 3vh;
+      font-size: 1rem;
+     align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    }
+
+    form, .content {
+      min-height: auto;
+    }
+
+    .input-group input {
+      font-size: 1.2rem;
+      height: 40px;
+    }
+
+    p.sec a {
+      
+      text-decoration: none;
+      font-size: .8rem;
+      color: #a94442;
+    }
+
+    p.sec i {
+      font-size: 1.2rem!important;
+    }
+    .btn {
+      margin: 10px 0;
+    }
+  }

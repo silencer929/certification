@@ -1,0 +1,244 @@
+*, ::before, ::after{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+:root {
+    --green: #64aa5d;
+    --mainwhite: #fff;
+    --chocolate: #bc5d2c;
+    --black: #000;
+    --lightGreen: #64ab5e;
+    --darkGreen: #28a745;
+    --light: #f8f9fa;
+    --blue: #007bff;
+    --forestGreen: #228b22;
+    --brown: #8B4513;
+}
+body{
+	font-size: 18px;
+	font-family: Arial, sans-serif;
+	line-height: 1.7;
+}
+hr{
+	border: 1px solid var(--lightGreen);
+	margin: 5px 10px;
+}
+.header{
+background-color: var(--forestGreen);
+height: fit-content;
+width: 100vw;
+padding: 10px 0;
+}
+.logo{
+	height: 100px;
+	width: 100px;
+	margin: 0 auto;
+	border-radius: 50px;
+	overflow: hidden;
+}
+.image{
+	width: 100%;
+	height: 100%;
+}
+.nursery-details{
+	height: 200px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.nursery-details > div{
+	height:40px;
+	width: fit-content;
+	font-size: 20px;
+}
+.nursery-details .rating{
+	height: 70px;
+	width: 400px;
+}
+.body{
+	min-height: 500px;
+	max-width: 1400px;
+	margin: 0 auto;
+	padding: 0 5px;
+}
+.upload-link{
+	height: 50px;
+	width: 200px;
+	margin: 10px 0px;
+}
+.upload-link i{
+	margin-left: 10px;
+	color:orange;
+	font-size: 25px;
+	animation: bounce 2s ease-in-out 5s infinite;
+}
+/*style for corrective action form*/
+.obs-rec-form{
+	height: fit-content;
+	width: fit-content;
+	padding: 10px 15px;
+	font-size: 17px;
+	display: flex;
+	box-shadow: 0 0 5px #000;
+	flex-direction: column;
+}
+.corrective-action{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+}
+.recommendation,.observation{
+	min-height: 100px;
+	min-width: 350px;
+	margin: 10px 0;
+	text-indent: 20px;
+	resize: none;
+	letter-spacing: 1px;
+	font-size: 18px;
+	padding: 5px;
+}
+input[name='submit']{
+	color: green;
+	height: 50px;
+	padding: 5px 0;
+	text-transform: capitalize;
+}
+/*table to diplay the list of observation and recommendation made
+by the inspector.
+The table will have a collpased border, 
+*/
+table{
+	line-height: 1.5;
+    font-size: 18px;
+    border: 1px solid var(--lightGreen);
+    border-collapse: collapse;
+    letter-spacing: 2px;
+    margin: 20px 0;
+}
+table thead{
+	background-color: var(--chocolate);
+}
+tr, th, td{
+	padding: 5px 10px;
+	border: 1px solid var(--lightGreen);
+}
+td{
+    padding: 2px 5px;
+    max-width: 400px;
+	overflow-wrap: break-word;
+}
+tbody tr:nth-child(odd){
+    background-color: #f2f2f2;
+}
+tbody tr:hover{
+    background-color: #fff;
+}
+tbody tr td .edit,tbody tr td .delete{
+	height: 50px;
+	width: 100px;
+}
+.btn{
+	background-color: darkgreen;
+	font-size: 17px;
+	font-weight: bold;
+	text-transform: capitalize;
+	border-radius: 5px;
+	outline: none;
+}
+.btn:hover{
+	color: white;
+}
+
+/*take care of nursery photos upload section
+	
+*/
+
+#upload{
+	width: 100vw;
+	height: 400px;
+	padding: 20px;
+}
+.images-upload-form{
+	margin: 15px 20px;
+	padding: 10px 15px;
+	height: 100%;
+	width: calc(100% - 40px);
+	border: 4px dashed #000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(img/camera1.png);
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+}
+.images-upload-form form{
+	height: fit-content;
+	width: fit-content;
+}
+/* For media screen max-width 600px the body is set to overflow hidden to stop*/
+@media only screen and (max-width: 600px){
+	.obs-rec-form{
+		vertical-align: middle;
+	}
+	.corrective-action{
+		flex-wrap: wrap-reverse;
+	}
+	table, tr{
+		border: transparent;
+	}
+	table thead{
+		display: none;
+	}
+	table tbody tr{
+		margin:10px 5px;
+		box-shadow: 0 0 5px #000;
+	}
+	table tbody tr,td{
+		display: block;
+	}
+	table tbody tr td{
+		position: relative;
+		padding: 5px 20px;
+		text-align:  right;
+	}
+	table tbody tr td::before{
+		content: attr(data-label);
+		position: absolute;
+		left: 0;
+		top: 0;
+		border: 0;
+		text-align: right;
+		font-weight: bolder;
+		width: fit-content;
+		background-color: red;
+		padding: 2px 10px;
+		text-transform: capitalize;
+	}
+	table tbody tr td:nth-child(2),table, tbody tr td:nth-child(3){
+
+	}
+}
+@keyframes bounce{
+	0%{
+		transform: translateY(-5px);
+	}
+	20%{
+		transform: translateY(-10px);
+	}
+	40%{
+		transform: translateY(10px);
+	}
+	60%{
+		transform: translateY(5px);
+	}
+	80%{
+		transform: translateY(10px);
+	}
+	100%{
+		transform: translateY(0px);
+	}
+}

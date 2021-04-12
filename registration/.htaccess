@@ -1,0 +1,9 @@
+<filesMatch "\.(html|js|css|json)$">
+    FileETag None
+    <ifModule mod_headers.c>
+        Header unset FileETag
+        Header set Cache-Control "max-age=0, no-cache, no-store, must-revalidate"
+        Header set Pragma "no-cache"
+        Header set Expired "Wed, 11 Jan 1984 05:00:00 GMT"
+    </ifModule>
+</filesMatch>

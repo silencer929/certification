@@ -1,0 +1,48 @@
+
+@media  screen and (max-width: 600px) {
+    {
+        box-sizing: border-box;
+    }
+    #NCF-003 {
+        height: 100%;
+        width: auto;
+        overflow: scroll;
+        margin: 0 10px;
+        zoom: 0.85;
+    }
+
+    .form-label {
+        white-space: nowrap;
+        font-size: 10px;
+    }
+    .nursery-info{
+        height: 100px;
+        flex-direction: column;
+    }
+    .score-progress{
+        flex-direction: column;
+    }
+
+    .nursery-info {
+        display: block;
+    }
+
+    .score-progress {
+        display: block;
+    }
+    .nursery-audit-score{
+        zoom: 0.9;
+    }
+    .display{
+        width: 100%;
+    }
+    .test{
+        zoom: 0.7;
+        font-size: 30px;
+    }
+    .marks select{
+        font-size: 30px;
+        zoom: 1;
+    }
+
+}
